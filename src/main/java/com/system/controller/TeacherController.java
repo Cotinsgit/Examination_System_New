@@ -35,13 +35,29 @@ public class TeacherController {
 
     // 显示我的课程
     @RequestMapping(value = "/showCourse")
-    public String stuCourseShow(Model model) throws Exception {
+    public String stuCourseShow(Model model, Integer page) throws Exception {
+
+        List<CourseCustom> list = null;
 
         Subject subject = SecurityUtils.getSubject();
         String username = (String) subject.getPrincipal();
 
-        List<CourseCustom> list = courseService.findByTeacherID(Integer.parseInt(username));
+        list = courseService.findByTeacherID(Integer.parseInt(username));
+
+        //页码对象
+        PagingVO pagingVO = new PagingVO();
+        //设置总页数
+        pagingVO.setTotalCount(courseService.getCountCouse());
+        if (page == null || page == 0) {
+            pagingVO.setToPageNo(1);
+            list = courseService.findByPaging(1);
+        } else {
+            pagingVO.setToPageNo(page);
+            list = courseService.findByPaging(page);
+        }
+
         model.addAttribute("courseList", list);
+        model.addAttribute("pagingVO", pagingVO);
 
         return "teacher/showCourse";
     }

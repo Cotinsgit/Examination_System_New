@@ -15,7 +15,7 @@
 
 	<style type="text/css">
 	body{
-	   background: url(images/d.jpg)repeat;
+	    background: url(images/d.jpg)repeat;
 	}
 	#login-box {
 		/*border:1px solid #F00;*/
