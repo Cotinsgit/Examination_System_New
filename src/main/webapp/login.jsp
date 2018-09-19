@@ -36,15 +36,15 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-4">
 				<div id="login-box">
-					<form class="form-horizontal" role="form" action="login" id="from1" method="post">
+					<form class="form-horizontal" role="form" action="login" id="from1" method="post" style="padding: 0px 13px 15px 13px">
 						<div class="form-group">
-							<label for="userID" class="col-sm-3 control-label">用户名：</label>
+							<label for="userID" class="col-sm-3 control-label">账&nbsp&nbsp&nbsp&nbsp&nbsp号</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="userID" placeholder="请输入名字" name="username">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="password" class="col-sm-3 control-label">密&nbsp&nbsp&nbsp&nbsp码：</label>
+							<label for="password" class="col-sm-3 control-label">密&nbsp&nbsp&nbsp&nbsp&nbsp码</label>
 							<div class="col-sm-9">
 								<input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
 							</div>
@@ -75,8 +75,8 @@
 				</div>
 
 
-				<div style="margin-top: 5px" id="declare">
-					<table style="margin-top: 200px">
+				<div style="margin-top: 20px" id="declare">
+					<table style="margin-top: 165px">
 						<tr align="center" >
 							<td>
 								<a href="#"><font color="white">关于火星</font></a>
