@@ -100,7 +100,7 @@ public class StudentController {
 
         model.addAttribute("selectedCourseList", list);
 
-        return "student/selectCourse";
+        return "student/selectedCourse";
     }
 
     // 已修课程
